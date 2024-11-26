@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Healthy Meal Plan Ideas</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Healthy Meal Plan Ideas</h1>
+      </header>
+
+       <div class="form-container">
+    <form id="recipe-generator-form">
+      <div class="input-group">
+        <label for="user-instructions">Favorite Ingredient:</label>
+        <input
+          type="text"
+          placeholder="Enter your favorite ingredient"
+          autofocus
+          required
+          autocomplete="off"
+          class="instructions"
+          id="user-instructions"
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="user-days">Number of Days:</label>
+        <input
+          type="number"
+          placeholder="How many days?"
+          required
+          min="1"
+          max="30"
+          class="days-input"
+          id="user-days"
+        />
+      </div>
+
+      <input type="submit" class="submit-button" />
+    </form>
+    <div class="hint">
+      i.e., Enter an ingredient like "Chicken" and specify the number of days (e.g., 5).
+    </div>
+  </div>
+  <div class="recipe hidden" id="recipe"></div>
+</main>
+
+      <footer>
+        This AI project was coded by
+        <a href="https://github.com/babiangeloni" target="_blank"
+          >Gabriela Angeloni</a
+        >
+        and is
+        <a
+          href="https://github.com/babiangeloni/Meal-Prep-Ideas"
+          target="_blank"
+        >
+          open-sourced on GitHub</a
+        >
+        and is
+        <a href=" " target="_blank">hosted on Netlify</a>.
+      </footer>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
