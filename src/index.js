@@ -14,7 +14,7 @@ function generateRecipe(event) {
   let daysInput = document.querySelector("#user-days");
   let apiKey = "2046c535afeb092fo82f1d306d8a2b2t";
   let context =
-    "You are a nutrition expert and love creating healthy meal plans. Your mission is to generate a meal plan based on the user's dietary preferences and health goals. Format the meal plan as a list in basic HTML, with each day labeled as 'Day 1', 'Day 2', and so on. Each day should have breakfast, lunch, dinner, and a snack, clearly identified. Ensure the meal plan is balanced, and use healthy ingredients. Sign the meal plan with 'MealPrep AI' inside a <strong> element at the end and NOT at the beginning.";
+    "You are a nutrition expert and love creating healthy meal plans. Your mission is to generate a meal plan based on the user's dietary preferences and health goals in under 30 minutes. Format the meal plan as a list in basic HTML, with each day labeled as 'Day 1', 'Day 2', and so on. Each day should have breakfast, lunch, dinner, and a snack, clearly identified. Ensure the meal plan is balanced, and use healthy ingredients. Sign the meal plan with 'MealPrep AI' inside a <strong> element at the end and NOT at the beginning.";
   let prompt = `User instructions: Generate a healthy ${daysInput.value}-day meal plan featuring ${instructionsInput.value} as a key ingredient.`;
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${encodeURIComponent(
     prompt
